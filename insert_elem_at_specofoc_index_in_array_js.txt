@@ -1,0 +1,23 @@
+insert an item in array at specific index : 
+
+console.log(" insert an item into array at specific index in JavaScript ")
+
+let no = parseInt(prompt("Enter the the value you want ot add"))
+let index = parseInt(prompt("Enter the index where you want ot add"))
+
+let arr = [1,2,3,4,5];
+console.log("OG array : \n" + arr)
+arr.splice(index,0,no);
+ console.log("New array \n " + arr)
+ 
+ 
+ console.log("----METHOD -2 ")
+ console.log("OG array : \n" + arr)
+ for(let i = arr.length-1; i>=0; i--)
+ {
+     arr[i] = arr[i-1];
+ }
+ 
+ arr[index] = no;
+  console.log("New array \n " + arr)
+

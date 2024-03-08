@@ -1,0 +1,72 @@
+console.log("---ARRAYS-----");
+
+let arr = ["red" , "orange", "Blue", "Green" , "Pink"];
+
+let size_of_array = arr.length;
+console.log("Size of the array is " + size_of_array + "\n");
+
+let first_elem = arr[0];
+let last_elem = arr[arr.length - 1];
+
+console.log("First elem : " + first_elem);
+console.log("Last elem : " + last_elem + "\n");
+
+console.log("\n------USING SLICE METHOD---------\n")
+
+ // Storing the first item in a variable
+let sliced_method_first_elem = arr.slice(0,1);
+
+// Storing the last item
+let sliced_method_last_elem = arr.slice(-1);
+
+console.log("First elem using Slice method:" + sliced_method_first_elem)
+console.log("Last elem using Slice method: " + sliced_method_last_elem)
+ 
+
+console.log("\n-------Get specific elem--------\n");
+console.log(arr.at(0));
+console.log(arr.at(1));
+
+
+console.log("\n --------Add New Elements in Array ----------")
+console.log("\n 1. UNSHIFT METHOD \n")
+console.log("before new elemt :   \n" + arr + "\n")
+arr.unshift("Unshift_color");
+console.log("After new elemt  : \n" + arr + "\n")
+console.log("\n 2. SPLICE METHOD \n")
+console.log("before new elemt :   \n" + arr + "\n")
+arr.splice(0,0,"Splice_color")
+console.log("After new elemt  : \n" + arr + "\n")
+
+
+console.log("\n ---------Remove elements from array-------\n")
+console.log("\n1. Last element using pop method ")
+let popped_elem = arr.pop();
+console.log("Popped elem is " + popped_elem);
+console.log("Remaining elem:  " + arr);
+
+console.log("\n 2. Remove elemnets till the array is empty")
+console.log("before:   \n" + arr + "\n")
+while(arr.length)
+{
+    arr.pop()
+}
+console.log("After   : \n" + arr + "\n")
+console.log("Size of the array is " + arr.length + "\n");
+
+let arr2 = [1,2,3,4,5,6,7,8,9,10];
+console.log("\n 3. Remove First elemnt")
+let first_elem_removed = arr2.shift();
+console.log("Removed element: " + first_elem_removed); 
+console.log("Remaining elements: " + arr2);
+
+console.log("\n 3. Remove Specific elemnt")
+
+let specific_elem = arr2.splice(1,1);
+console.log("Removed element: " + specific_elem); 
+console.log("Remaining elements: " + arr2);
+
+console.log("\n remove all ements")
+arr2.splice(0, arr2.length);
+console.log("size of the array" , arr2.length);
+
